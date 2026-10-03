@@ -1,0 +1,220 @@
+/* ===== Variabel warna ===== */
+:root {
+  --hijau-utama: #5c7c64;
+  --hijau-muda: #a8e0b5;
+  --hijau-badge: #d3e0d6;
+  --latar: #f5f5f5;
+  --abu-teks: #555555;
+}
+
+/* ===== Dasar ===== */
+html {
+  scroll-behavior: smooth;
+}
+section,
+header {
+  scroll-margin-top: 70px;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--latar);
+}
+.text-hijau {
+  color: var(--hijau-utama);
+}
+.text-abu {
+  color: var(--abu-teks);
+}
+
+/* ===== Tombol ===== */
+.btn-hijau {
+  background: var(--hijau-utama);
+  color: #fff;
+}
+.btn-hijau:hover {
+  background: #4a6651;
+  color: #fff;
+}
+.btn-hijau,
+.btn-dark {
+  border-radius: 0.6rem;
+}
+
+/* ===== Navbar ===== */
+.navbar .nav-link {
+  color: var(--abu-teks);
+  font-weight: 500;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--hijau-utama);
+}
+
+/* ===== Hero ===== */
+.hero {
+  padding: 4rem 0;
+}
+.badge-hijau {
+  display: inline-block;
+  background: var(--hijau-badge);
+  color: var(--hijau-utama);
+  padding: 0.5rem 1rem;
+  border-radius: 0.6rem;
+}
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.3;
+}
+.kartu-profil {
+  border: 1px solid #e5e5e5;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+.avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: #000;
+  color: var(--hijau-utama);
+  border: 10px solid var(--hijau-utama);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+}
+
+/* ===== Section dengan gradasi (Tentang & Kontak) ===== */
+.bg-gradasi {
+  background: linear-gradient(to bottom, var(--hijau-utama), var(--hijau-muda));
+}
+.badge-putih {
+  display: inline-block;
+  background: #fff;
+  color: var(--hijau-utama);
+  padding: 0.5rem 1rem;
+  border-radius: 0.6rem;
+}
+
+/* ===== Progress bar keahlian ===== */
+.progress {
+  height: 8px;
+  background: #d9d9d9;
+}
+.progress-bar {
+  background: var(--hijau-utama);
+}
+
+/* ===== Kartu project ===== */
+.kartu-project {
+  border: 0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+.kartu-project:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+.gambar-wrap {
+  position: relative;
+  height: 180px;
+}
+.gambar-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gambar-judul {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.8rem;
+}
+.label-project {
+  color: var(--hijau-utama);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.link-detail {
+  color: var(--hijau-utama);
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.link-detail:hover {
+  color: #000;
+}
+
+/* ===== Form kontak ===== */
+.kartu-form {
+  max-width: 900px;
+  border-radius: 1.5rem;
+}
+.form-control {
+  background: #f0f0f0;
+}
+.form-control:focus {
+  border-color: var(--hijau-utama);
+  box-shadow: 0 0 0 0.2rem rgba(92, 124, 100, 0.25);
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #000;
+  color: #bbb;
+}
+.ikon-sosial {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #4d4d4d;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+.ikon-sosial:hover {
+  background: var(--hijau-utama);
+  color: #fff;
+}
+.pil-footer {
+  display: inline-block;
+  background: #25302a;
+  border-radius: 1rem;
+  padding: 0.9rem 2rem;
+  font-weight: 500;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 991px) {
+  .hero {
+    padding: 2.5rem 0;
+  }
+}
+@media (max-width: 767px) {
+  .hero .btn {
+    width: 100%;
+  } /* tombol hero tersusun penuh */
+  section.py-5 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+}
+@media (max-width: 575px) {
+  .avatar {
+    width: 180px;
+    height: 180px;
+    font-size: 3rem;
+    border-width: 7px;
+  }
+  .kartu-form {
+    padding: 1.5rem !important;
+  }
+}
